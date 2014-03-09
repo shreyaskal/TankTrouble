@@ -1,14 +1,16 @@
 package com.example.tanktrouble;
 
-import com.example.tanktrouble.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
+
+import com.example.tanktrouble.util.SystemUiHider;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -44,6 +46,7 @@ public class TankTroubleMenu extends Activity {
 	 * The instance of the {@link SystemUiHider} for this activity.
 	 */
 	private SystemUiHider mSystemUiHider;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +154,11 @@ public class TankTroubleMenu extends Activity {
 		}
 	};
 
+	public void startGame(View view) {
+		Intent intent = new Intent(this, TankTroubleActivity.class);
+		startActivity(intent);
+	}
+	
 	/**
 	 * Schedules a call to hide() in [delay] milliseconds, canceling any
 	 * previously scheduled calls.

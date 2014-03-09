@@ -24,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.tanktrouble.TankTroubleActivity"
+            android:label="@string/title_activity_tank_trouble" >
+        </activity>
     </application>
 
 </manifest>
